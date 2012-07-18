@@ -1,0 +1,14 @@
+/*
+	author: Antonio Calderone
+*/
+
+{{$loop:rows$}}
+	<!--{{%fluid%}}-->
+	<div {{$op:rowId$}}id="{{%rowId%}}"{{$/op:rowId$}} class="row{{$op:fluid$}}-fluid{{$/op:fluid$}}">
+		{{$loop:columns$}}
+			<div {{$op:colId$}}id="{{%colId%}}"{{$/op:colId$}} class="span{{%span%}} {{$op:offset$}}offset{{%offset%}}{{$/op:offset$}}">
+				{{%content%}}
+			</div>
+		{{$/loop:columns$}}
+	</div>
+{{$/loop:rows$}}

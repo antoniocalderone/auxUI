@@ -1,0 +1,41 @@
+<!--{{%subnavContainer%}}-->
+{{$op:subnavContainer$}}
+	<div class="subnav">
+{{$/op:subnavContainer$}}
+<ul {{$op:id$}}id="{{%id%}}"{{$/op:id$}} class="nav nav-pills">
+	{{$loop:nav$}}
+		<!--{{%subnav%}} {{%active%}}-->
+		<li class="{{$op:active$}}active{{$/op:active$}} {{$op:subnav$}}dropdown{{$/op:subnav$}}">
+			<a href="{{%link:#%}}" {{$op:subnav$}}class="dropdown-toggle" data-toggle="dropdown"{{$/op:subnav$}}>
+				{{$op:icon$}}
+					<i class="icon-{{%icon%}} icon-white"></i> 
+				{{$/op:icon$}}
+				{{%label%}}
+				{{$op:subnav$}}
+					<b class="caret"></b>
+				{{$/op:subnav$}}
+			</a>
+			{{$op:subnav$}}
+				<ul class="dropdown-menu">
+					{{$loop:subnav$}}
+						<li>
+							<a href="{{%link:#%}}">
+								{{$op:icon$}}
+									<i class="icon-{{%icon%}}"></i> 
+								{{$/op:icon$}}
+								{{%label%}}
+							</a>
+						</li>
+						<!--{{%divider%}}-->
+						{{$op:divider$}}
+							<li class="divider"></li>
+						{{$/op:divider$}}
+					{{$/loop:subnav$}}
+				</ul>
+			{{$/op:subnav$}}
+		</li>
+	{{$/loop:nav$}}
+</ul>
+{{$op:subnavContainer$}}
+	</div>
+{{$/op:subnavContainer$}}

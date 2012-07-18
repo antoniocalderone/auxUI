@@ -1,0 +1,11 @@
+<ul {{$op:id$}}id="{{%id%}}"{{$/op:id$}} class="thumbnails">
+	{{$loop:thumbs$}}
+		<li class="span{{%span:2%}}">
+			<div class="thumbnail">
+				<img src="{{%url:http://placehold.it/160x120%}}" {{$op:alt$}}alt="{{%alt%}}" title="{{%alt%}}"{{$/op:alt$}}>
+				{{$op:title$}}<h5>{{%title%}}</h5>{{$/op:title$}}
+				{{$op:description$}}<p>{{%description%}}</p>{{$/op:description$}}
+			</div>
+		</li>
+	{{$/loop:thumbs$}}
+</ul>

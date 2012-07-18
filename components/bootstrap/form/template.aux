@@ -1,0 +1,14 @@
+/*
+	author: Antonio Calderone
+
+	* Variables possible values
+	disposition: 
+		- vertical (default): Stacked, left-aligned labels over controls
+		- inline: Left-aligned label and inline-block controls for compact style
+		- search: Extra-rounded text input for a typical search aesthetic
+		- horizontal: Float left, right-aligned labels on same line as controls
+	well:
+		- boolean: Adds border rounded box with grey background to the form
+*/
+<!--{{%well%}}-->
+<form {{$op:id$}}id="{{%id%}}"{{$/op:id$}} class="form-{{%disposition:vertical%}} {{$op:well$}}well{{$/op:well$}}"></form>

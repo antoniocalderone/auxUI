@@ -1,0 +1,46 @@
+<!--
+	{{%disabled%}}
+	{{%readonly%}}
+-->
+
+
+{{#
+	"css":			"",
+	"js":			"bootstrap:radiobuttons.js",
+	"jsthrower":	"radiobuttonsJS()"
+#}}
+
+<div id="{{%id%}}"
+	 class="
+		control-group 
+		{{$op:appereance$}}
+			{{%appereance%}}
+		{{$/op:appereance$}} 
+" data-lm-type="radiobuttons" data-lm-style="{{%disposition%}}" {{$op:disabled$}}data-lm-disabled{{$/op:disabled$}}>
+	{{$op:label$}}
+		<label class="control-label" for="{{%id%}}">{{%label%}}</label>
+	{{$/op:label$}}
+	<div class="controls">
+		{{$loop:options$}}
+			<!--
+				{{%checked%}}
+				{{%disabled%}}
+			-->
+			<label class="radio" for="{{%id%}}">
+				<input
+					 type="radio"
+					 id="{{%id%}}"
+					 name=""
+					 value="{{%value%}}"
+					{{$op:checked$}}
+						 checked="checked"
+					{{$/op:checked$}}
+					{{$op:disabled$}}
+						 disabled
+					{{$/op:disabled$}}
+				>
+				 {{%label%}}
+			</label>
+		{{$/loop:options$}}
+	</div>
+</div>

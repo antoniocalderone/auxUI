@@ -1,0 +1,131 @@
+/*
+	author:			Antonio Calderone
+
+	* Variables
+	size:
+		- xlarge (default)
+		- mini
+		- small
+		- medium
+	span:
+		- from 1 to 12
+	appereance:
+		- focused
+		- warning
+		- error
+		- success
+
+*/
+
+{{#
+	"css":			"",
+	"js":			"bootstrap:inputText.js",
+	"jsthrower":	"inputTextJS()"
+#}}
+
+<!--
+	{{%useIdAsName%}}
+	{{%disabled%}}
+	{{%readonly%}}
+	{{%focused%}}
+	{{%addonPrepend%}}
+	{{%addonAppend%}}
+	{{%buttonAppend%}}
+-->
+
+<div 
+	class="
+		control-group 
+		{{$op:appereance$}}
+			{{%appereance%}}
+		{{$/op:appereance$}} 
+">
+	{{$op:label$}}
+		<label class="control-label" for="{{%id%}}">{{%label%}}</label>
+	{{$/op:label$}}
+	<div class="controls">
+		{{$op:addonPrepend$}}
+			<div class="input-prepend">
+				<span class="add-on">
+					{{$op:addonPrependIcon$}}
+						 <i class="icon-{{%addonPrependIcon%}}"></i>
+					{{$/op:addonPrependIcon$}} 
+					{{%addonPrependText%}}
+				</span>
+		{{$/op:addonPrepend$}}
+
+		{{$op:addonAppend$}}
+			<div class="input-append">
+		{{$/op:addonAppend$}}
+
+		{{$op:buttonAppend$}}
+			<div class="input-append">
+		{{$/op:buttonAppend$}}
+
+		<input 
+			type="{{%type:text%}}" 
+			class="
+				input-{{%size:xlarge%}}
+				{{$op:span$}}
+					 span{{%span%}}
+				{{$/op:span$}}
+				{{$op:disabled$}}
+					 disabled
+				{{$/op:disabled$}}
+				{{$op:focused$}}
+					 focused
+				{{$/op:focused$}}
+			" 
+			id="{{%id%}}" 
+			{{$op:name$}}
+				name="{{%name%}}"
+			{{$/op:name$}}
+			{{$op:useIdAsName$}}
+				 name="{{%id%}}"
+			{{$/op:useIdAsName$}}
+			{{$op:disabled$}}
+				 disabled
+			{{$/op:disabled$}}
+			{{$op:placeholder$}}
+				 placeholder="{{%placeholder%}}"
+			{{$/op:placeholder$}}
+			{{$op:readonly$}}
+				 readonly
+			{{$/op:readonly$}}
+
+			 value="{{%value%}}"
+
+		>
+
+		{{$op:readonly$}}
+			<span style="display:none;" data-lm-rel="{{%id%}}" class="input-{{%size%}} {{$op:span$}}span{{%span%}}{{$/op:span$}} uneditable-input">{{%value%}}</span>
+		{{$/op:readonly$}}
+
+		{{$op:buttonAppend$}}
+				<button class="btn" type="button" onclick="{{%buttonAppendCallback%}}">
+					{{$op:buttonAppendIcon$}}
+						 <i class="icon-{{%buttonAppendIcon%}}"></i>
+					{{$/op:buttonAppendIcon$}} 
+					{{%buttonAppendText%}}
+				</button>
+			</div>
+		{{$/op:buttonAppend$}}
+
+		{{$op:addonAppend$}}
+				<span class="add-on">
+					{{$op:addonAppendIcon$}}
+						 <i class="icon-{{%addonAppendIcon%}}"></i>
+					{{$/op:addonAppendIcon$}} 
+					{{%addonAppendText%}}
+				</span>
+			</div>
+		{{$/op:addonAppend$}}
+
+		{{$op:addonPrepend$}}
+			</div>
+		{{$/op:addonPrepend$}}
+		{{$op:help$}}
+			<p class="help-{{%helpType:block%}}">{{%help%}}</p>
+		{{$/op:help$}}
+	</div>
+</div>

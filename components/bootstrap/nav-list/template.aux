@@ -1,0 +1,20 @@
+<!--{{%welll%}}-->
+<ul {{$op:id$}}id="{{%id%}}"{{$/op:id$}} class="nav nav-list {{$op:well$}}well{{$/op:well$}}">
+	{{$loop:group$}}
+		{{$op:navHeader$}}
+			<li class="nav-header">{{%navHeader%}}</li>
+		{{$/op:navHeader$}}
+		{{$loop:items$}}
+			<li>
+				<a href="{{%link%}}">
+					{{$op:icon$}}
+						<i class="icon-{{%icon%}}"></i>
+					{{$/op:icon$}}
+					{{%label%}}
+				</a>
+			</li>
+
+			{{$op:divider$}}<li class="divider">{{%divider%}}</li>{{$/op:divider$}}
+		{{$/loop:items$}}
+	{{$/loop:group$}}
+</ul>

@@ -1,0 +1,17 @@
+<!--{{%unstyled%}}-->
+<{{%type:ul%}} {{$op:unstyled$}}class="unstyled"{{$/op:unstyled$}} {{$op:id$}}id="{{%id%}}"{{$/op:id$}}>
+	{{$loop:items$}}
+		<li> {{%label%}}
+			<!--{{%subitems%}}-->
+			{{$op:subitems$}}
+				<ul>
+					{{$loop:subitems$}}
+						<li>
+							{{%label%}}
+						</li>
+					{{$/loop:subitems$}}
+				</ul>
+			{{$/op:subitems$}}
+		</li>
+	{{$/loop:items$}}
+</{{%type:ul%}}>

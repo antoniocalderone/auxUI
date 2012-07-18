@@ -1,4 +1,4 @@
 auxUI
 =====
 
-javascript base user interface component system
+javascript based user interface component system
